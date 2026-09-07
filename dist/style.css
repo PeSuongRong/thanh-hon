@@ -1,0 +1,919 @@
+body {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes heart {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(64, 74, 29, 0.5);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 6px 35px rgba(64, 74, 29, 0.5);
+  }
+}
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-relative {
+  position: relative;
+  z-index: 4;
+}
+
+.c-invitation {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to bottom right, #404A1D, #5a6628, #404A1D);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.c-invitation.is-hide {
+  display: none;
+}
+.c-invitation__spot-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.c-invitation__box {
+  width: 520px;
+  max-width: 94%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 40px rgba(64, 74, 29, 0.15);
+  border-radius: 8px;
+  background: url(./img/white-flower.png) no-repeat left -14% top -14%/40% auto, url(./img/white-flower.png) no-repeat right -12% bottom -23%/40% auto, rgba(255, 250, 247, 0.98);
+  border: 1px solid rgba(64, 74, 29, 0.15);
+  padding: 5%;
+}
+.c-invitation__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #ffffff;
+  margin: 0 auto 20px;
+  background: radial-gradient(circle at 30% 30%, #404A1D, #222c00);
+  animation: heart 2s ease-in-out infinite;
+}
+.c-invitation__icon svg {
+  width: 28px;
+  height: 28px;
+}
+.c-invitation__tt {
+  font-size: 36px;
+  color: #404A1D;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.c-invitation__tt span {
+  font-size: 20px;
+}
+.c-invitation__ribbon {
+  color: #404A1D;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.c-invitation__line1, .c-invitation__line2 {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+}
+.c-invitation__line1 {
+  background: linear-gradient(to right, transparent, #404A1D);
+}
+.c-invitation__line2 {
+  background: linear-gradient(to left, transparent, #404A1D);
+}
+.c-invitation__date, .c-invitation__text {
+  color: rgba(64, 74, 29, 0.75);
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.1;
+}
+.c-invitation__date span {
+  font-size: 0.8rem;
+}
+.c-invitation__open {
+  background-color: #404A1D;
+  border: 2px solid #404A1D;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  border-radius: 25px;
+  width: 140px;
+  height: 48px;
+  margin: 20px auto 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.c-invitation__open:hover {
+  background-color: #fff;
+  color: #404A1D;
+}
+.c-invitation__spots {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+  animation: invitation-spot linear infinite;
+}
+.c-invitation__spots:nth-child(1) {
+  width: 7px;
+  height: 7px;
+  left: 91%;
+  top: 43%;
+  background: rgba(165, 245, 163, 0.8);
+  --move-x: -45px;
+  --move-y: 29px;
+  animation-duration: 4426ms;
+  animation-delay: -1572ms;
+}
+.c-invitation__spots:nth-child(2) {
+  width: 8px;
+  height: 8px;
+  left: 35%;
+  top: 34%;
+  background: rgba(237, 153, 150, 0.8);
+  --move-x: 66px;
+  --move-y: 17px;
+  animation-duration: 3895ms;
+  animation-delay: -787ms;
+}
+.c-invitation__spots:nth-child(3) {
+  width: 15px;
+  height: 15px;
+  left: 41%;
+  top: 15%;
+  background: rgba(140, 227, 221, 0.8);
+  --move-x: 36px;
+  --move-y: 66px;
+  animation-duration: 3760ms;
+  animation-delay: -1329ms;
+}
+.c-invitation__spots:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  left: 1%;
+  top: 65%;
+  background: rgba(216, 75, 157, 0.8);
+  --move-x: -1px;
+  --move-y: -27px;
+  animation-duration: 3360ms;
+  animation-delay: -3846ms;
+}
+.c-invitation__spots:nth-child(5) {
+  width: 8px;
+  height: 8px;
+  left: 4%;
+  top: 43%;
+  background: rgba(153, 132, 231, 0.8);
+  --move-x: 53px;
+  --move-y: -23px;
+  animation-duration: 4302ms;
+  animation-delay: -3022ms;
+}
+.c-invitation__spots:nth-child(6) {
+  width: 13px;
+  height: 13px;
+  left: 74%;
+  top: 49%;
+  background: rgba(239, 223, 159, 0.8);
+  --move-x: -62px;
+  --move-y: 61px;
+  animation-duration: 2246ms;
+  animation-delay: -563ms;
+}
+.c-invitation__spots:nth-child(7) {
+  width: 4px;
+  height: 4px;
+  left: 79%;
+  top: 87%;
+  background: rgba(62, 205, 224, 0.8);
+  --move-x: -48px;
+  --move-y: 69px;
+  animation-duration: 4040ms;
+  animation-delay: -1931ms;
+}
+.c-invitation__spots:nth-child(8) {
+  width: 16px;
+  height: 16px;
+  left: 36%;
+  top: 88%;
+  background: rgba(81, 225, 225, 0.8);
+  --move-x: -52px;
+  --move-y: 5px;
+  animation-duration: 2481ms;
+  animation-delay: -303ms;
+}
+.c-invitation__spots:nth-child(9) {
+  width: 16px;
+  height: 16px;
+  left: 6%;
+  top: 93%;
+  background: rgba(234, 159, 220, 0.8);
+  --move-x: 16px;
+  --move-y: -27px;
+  animation-duration: 2311ms;
+  animation-delay: -375ms;
+}
+.c-invitation__spots:nth-child(10) {
+  width: 4px;
+  height: 4px;
+  left: 37%;
+  top: 35%;
+  background: rgba(204, 215, 106, 0.8);
+  --move-x: 58px;
+  --move-y: 33px;
+  animation-duration: 3068ms;
+  animation-delay: -3827ms;
+}
+.c-invitation__spots:nth-child(11) {
+  width: 10px;
+  height: 10px;
+  left: 11%;
+  top: 85%;
+  background: rgba(225, 236, 172, 0.8);
+  --move-x: -61px;
+  --move-y: -61px;
+  animation-duration: 3172ms;
+  animation-delay: -1974ms;
+}
+.c-invitation__spots:nth-child(12) {
+  width: 4px;
+  height: 4px;
+  left: 60%;
+  top: 47%;
+  background: rgba(181, 220, 91, 0.8);
+  --move-x: 65px;
+  --move-y: 30px;
+  animation-duration: 2441ms;
+  animation-delay: -2107ms;
+}
+.c-invitation__spots:nth-child(13) {
+  width: 11px;
+  height: 11px;
+  left: 4%;
+  top: 26%;
+  background: rgba(217, 116, 94, 0.8);
+  --move-x: -59px;
+  --move-y: -64px;
+  animation-duration: 4011ms;
+  animation-delay: -3923ms;
+}
+.c-invitation__spots:nth-child(14) {
+  width: 13px;
+  height: 13px;
+  left: 85%;
+  top: 48%;
+  background: rgba(114, 173, 228, 0.8);
+  --move-x: 45px;
+  --move-y: -57px;
+  animation-duration: 3929ms;
+  animation-delay: -2567ms;
+}
+.c-invitation__spots:nth-child(15) {
+  width: 17px;
+  height: 17px;
+  left: 28%;
+  top: 74%;
+  background: rgba(229, 197, 164, 0.8);
+  --move-x: -11px;
+  --move-y: 43px;
+  animation-duration: 3701ms;
+  animation-delay: -3059ms;
+}
+.c-invitation__spots:nth-child(16) {
+  width: 10px;
+  height: 10px;
+  left: 56%;
+  top: 32%;
+  background: rgba(200, 83, 202, 0.8);
+  --move-x: -18px;
+  --move-y: -35px;
+  animation-duration: 3185ms;
+  animation-delay: -1074ms;
+}
+.c-invitation__spots:nth-child(17) {
+  width: 15px;
+  height: 15px;
+  left: 33%;
+  top: 27%;
+  background: rgba(195, 169, 229, 0.8);
+  --move-x: -38px;
+  --move-y: -22px;
+  animation-duration: 4402ms;
+  animation-delay: -2599ms;
+}
+.c-invitation__spots:nth-child(18) {
+  width: 17px;
+  height: 17px;
+  left: 96%;
+  top: 80%;
+  background: rgba(148, 80, 215, 0.8);
+  --move-x: 9px;
+  --move-y: 25px;
+  animation-duration: 3885ms;
+  animation-delay: -1903ms;
+}
+.c-invitation__spots:nth-child(19) {
+  width: 10px;
+  height: 10px;
+  left: 84%;
+  top: 37%;
+  background: rgba(131, 234, 67, 0.8);
+  --move-x: 6px;
+  --move-y: -31px;
+  animation-duration: 4379ms;
+  animation-delay: -2333ms;
+}
+.c-invitation__spots:nth-child(20) {
+  width: 16px;
+  height: 16px;
+  left: 29%;
+  top: 96%;
+  background: rgba(238, 220, 119, 0.8);
+  --move-x: 76px;
+  --move-y: 10px;
+  animation-duration: 2797ms;
+  animation-delay: -3633ms;
+}
+.c-invitation__spots:nth-child(21) {
+  width: 8px;
+  height: 8px;
+  left: 68%;
+  top: 57%;
+  background: rgba(230, 107, 117, 0.8);
+  --move-x: -37px;
+  --move-y: -66px;
+  animation-duration: 4462ms;
+  animation-delay: -1524ms;
+}
+.c-invitation__spots:nth-child(22) {
+  width: 7px;
+  height: 7px;
+  left: 20%;
+  top: 36%;
+  background: rgba(193, 231, 70, 0.8);
+  --move-x: -79px;
+  --move-y: -69px;
+  animation-duration: 2753ms;
+  animation-delay: -2312ms;
+}
+.c-invitation__spots:nth-child(23) {
+  width: 9px;
+  height: 9px;
+  left: 59%;
+  top: 73%;
+  background: rgba(184, 222, 89, 0.8);
+  --move-x: 57px;
+  --move-y: 49px;
+  animation-duration: 4116ms;
+  animation-delay: -3804ms;
+}
+.c-invitation__spots:nth-child(24) {
+  width: 17px;
+  height: 17px;
+  left: 89%;
+  top: 8%;
+  background: rgba(198, 141, 242, 0.8);
+  --move-x: 15px;
+  --move-y: 64px;
+  animation-duration: 3423ms;
+  animation-delay: -1439ms;
+}
+.c-invitation__spots:nth-child(25) {
+  width: 12px;
+  height: 12px;
+  left: 89%;
+  top: 88%;
+  background: rgba(228, 155, 183, 0.8);
+  --move-x: -54px;
+  --move-y: 23px;
+  animation-duration: 3758ms;
+  animation-delay: -1574ms;
+}
+.c-invitation__spots:nth-child(26) {
+  width: 14px;
+  height: 14px;
+  left: 15%;
+  top: 55%;
+  background: rgba(232, 195, 109, 0.8);
+  --move-x: -66px;
+  --move-y: -65px;
+  animation-duration: 2750ms;
+  animation-delay: -3685ms;
+}
+.c-invitation__spots:nth-child(27) {
+  width: 8px;
+  height: 8px;
+  left: 14%;
+  top: 34%;
+  background: rgba(95, 231, 120, 0.8);
+  --move-x: 16px;
+  --move-y: -47px;
+  animation-duration: 3340ms;
+  animation-delay: -2211ms;
+}
+.c-invitation__spots:nth-child(28) {
+  width: 16px;
+  height: 16px;
+  left: 51%;
+  top: 15%;
+  background: rgba(224, 154, 113, 0.8);
+  --move-x: 5px;
+  --move-y: -11px;
+  animation-duration: 2041ms;
+  animation-delay: -347ms;
+}
+.c-invitation__spots:nth-child(29) {
+  width: 8px;
+  height: 8px;
+  left: 26%;
+  top: 9%;
+  background: rgba(107, 84, 212, 0.8);
+  --move-x: -56px;
+  --move-y: 32px;
+  animation-duration: 2597ms;
+  animation-delay: -560ms;
+}
+.c-invitation__spots:nth-child(30) {
+  width: 11px;
+  height: 11px;
+  left: 17%;
+  top: 92%;
+  background: rgba(240, 142, 145, 0.8);
+  --move-x: -37px;
+  --move-y: 40px;
+  animation-duration: 2534ms;
+  animation-delay: -16ms;
+}
+.c-invitation__spots:nth-child(31) {
+  width: 17px;
+  height: 17px;
+  left: 92%;
+  top: 41%;
+  background: rgba(160, 239, 159, 0.8);
+  --move-x: -9px;
+  --move-y: -36px;
+  animation-duration: 3765ms;
+  animation-delay: -1427ms;
+}
+.c-invitation__spots:nth-child(32) {
+  width: 13px;
+  height: 13px;
+  left: 5%;
+  top: 34%;
+  background: rgba(234, 188, 164, 0.8);
+  --move-x: -44px;
+  --move-y: -43px;
+  animation-duration: 3157ms;
+  animation-delay: -1570ms;
+}
+.c-invitation__spots:nth-child(33) {
+  width: 13px;
+  height: 13px;
+  left: 72%;
+  top: 9%;
+  background: rgba(86, 235, 233, 0.8);
+  --move-x: -76px;
+  --move-y: 17px;
+  animation-duration: 2149ms;
+  animation-delay: -1692ms;
+}
+.c-invitation__spots:nth-child(34) {
+  width: 17px;
+  height: 17px;
+  left: 45%;
+  top: 79%;
+  background: rgba(223, 241, 131, 0.8);
+  --move-x: -69px;
+  --move-y: -62px;
+  animation-duration: 2900ms;
+  animation-delay: -1355ms;
+}
+.c-invitation__spots:nth-child(35) {
+  width: 13px;
+  height: 13px;
+  left: 97%;
+  top: 89%;
+  background: rgba(171, 209, 232, 0.8);
+  --move-x: 48px;
+  --move-y: -53px;
+  animation-duration: 3514ms;
+  animation-delay: -620ms;
+}
+.c-invitation__spots:nth-child(36) {
+  width: 13px;
+  height: 13px;
+  left: 41%;
+  top: 24%;
+  background: rgba(165, 113, 209, 0.8);
+  --move-x: -70px;
+  --move-y: -31px;
+  animation-duration: 3193ms;
+  animation-delay: -3026ms;
+}
+.c-invitation__spots:nth-child(37) {
+  width: 12px;
+  height: 12px;
+  left: 32%;
+  top: 28%;
+  background: rgba(126, 241, 161, 0.8);
+  --move-x: -6px;
+  --move-y: 34px;
+  animation-duration: 3844ms;
+  animation-delay: -2493ms;
+}
+.c-invitation__spots:nth-child(38) {
+  width: 8px;
+  height: 8px;
+  left: 28%;
+  top: 19%;
+  background: rgba(86, 220, 230, 0.8);
+  --move-x: 42px;
+  --move-y: -2px;
+  animation-duration: 2742ms;
+  animation-delay: -363ms;
+}
+.c-invitation__spots:nth-child(39) {
+  width: 11px;
+  height: 11px;
+  left: 77%;
+  top: 13%;
+  background: rgba(136, 133, 224, 0.8);
+  --move-x: 8px;
+  --move-y: 60px;
+  animation-duration: 3785ms;
+  animation-delay: -1291ms;
+}
+.c-invitation__spots:nth-child(40) {
+  width: 6px;
+  height: 6px;
+  left: 24%;
+  top: 76%;
+  background: rgba(195, 154, 239, 0.8);
+  --move-x: 26px;
+  --move-y: 77px;
+  animation-duration: 4039ms;
+  animation-delay: -182ms;
+}
+.c-invitation__spots:nth-child(41) {
+  width: 5px;
+  height: 5px;
+  left: 81%;
+  top: 58%;
+  background: rgba(155, 172, 233, 0.8);
+  --move-x: -26px;
+  --move-y: 17px;
+  animation-duration: 3626ms;
+  animation-delay: -1287ms;
+}
+.c-invitation__spots:nth-child(42) {
+  width: 12px;
+  height: 12px;
+  left: 65%;
+  top: 91%;
+  background: rgba(153, 209, 240, 0.8);
+  --move-x: 38px;
+  --move-y: -46px;
+  animation-duration: 3837ms;
+  animation-delay: -2465ms;
+}
+.c-invitation__spots:nth-child(43) {
+  width: 4px;
+  height: 4px;
+  left: 85%;
+  top: 43%;
+  background: rgba(65, 225, 71, 0.8);
+  --move-x: -63px;
+  --move-y: -77px;
+  animation-duration: 3789ms;
+  animation-delay: -1105ms;
+}
+.c-invitation__spots:nth-child(44) {
+  width: 9px;
+  height: 9px;
+  left: 23%;
+  top: 90%;
+  background: rgba(164, 107, 214, 0.8);
+  --move-x: 1px;
+  --move-y: -61px;
+  animation-duration: 3783ms;
+  animation-delay: -3252ms;
+}
+.c-invitation__spots:nth-child(45) {
+  width: 8px;
+  height: 8px;
+  left: 97%;
+  top: 22%;
+  background: rgba(226, 152, 173, 0.8);
+  --move-x: 41px;
+  --move-y: 15px;
+  animation-duration: 4412ms;
+  animation-delay: -3944ms;
+}
+.c-invitation__spots:nth-child(46) {
+  width: 16px;
+  height: 16px;
+  left: 98%;
+  top: 39%;
+  background: rgba(136, 125, 237, 0.8);
+  --move-x: -25px;
+  --move-y: -71px;
+  animation-duration: 3875ms;
+  animation-delay: -2007ms;
+}
+.c-invitation__spots:nth-child(47) {
+  width: 14px;
+  height: 14px;
+  left: 79%;
+  top: 49%;
+  background: rgba(234, 203, 154, 0.8);
+  --move-x: 63px;
+  --move-y: -79px;
+  animation-duration: 3250ms;
+  animation-delay: -1012ms;
+}
+.c-invitation__spots:nth-child(48) {
+  width: 13px;
+  height: 13px;
+  left: 62%;
+  top: 58%;
+  background: rgba(223, 109, 166, 0.8);
+  --move-x: 73px;
+  --move-y: 69px;
+  animation-duration: 4266ms;
+  animation-delay: -3078ms;
+}
+.c-invitation__spots:nth-child(49) {
+  width: 4px;
+  height: 4px;
+  left: 13%;
+  top: 54%;
+  background: rgba(235, 199, 162, 0.8);
+  --move-x: -64px;
+  --move-y: -10px;
+  animation-duration: 3650ms;
+  animation-delay: -2303ms;
+}
+.c-invitation__spots:nth-child(50) {
+  width: 14px;
+  height: 14px;
+  left: 77%;
+  top: 49%;
+  background: rgba(82, 229, 192, 0.8);
+  --move-x: -15px;
+  --move-y: -6px;
+  animation-duration: 3845ms;
+  animation-delay: -572ms;
+}
+.c-invitation__spots:nth-child(51) {
+  width: 13px;
+  height: 13px;
+  left: 28%;
+  top: 30%;
+  background: rgba(99, 227, 193, 0.8);
+  --move-x: 13px;
+  --move-y: 75px;
+  animation-duration: 2399ms;
+  animation-delay: -1412ms;
+}
+.c-invitation__spots:nth-child(52) {
+  width: 7px;
+  height: 7px;
+  left: 92%;
+  top: 81%;
+  background: rgba(231, 166, 205, 0.8);
+  --move-x: -75px;
+  --move-y: -53px;
+  animation-duration: 3933ms;
+  animation-delay: -3283ms;
+}
+
+@keyframes invitation-spot {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.6);
+  }
+  20%, 80% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--move-x), var(--move-y), 0) scale(1.25);
+  }
+}
+.c-invitation-detail {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  display: none;
+  transition: all 0.3s ease;
+}
+.c-invitation-detail.is-show {
+  display: block;
+}
+.c-invitation-detail__wrap {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #fffaf7;
+  color: #404a1d;
+  padding: 7% 2%;
+}
+.c-invitation-detail__flower {
+  position: absolute;
+  left: -10%;
+  top: -3%;
+  width: 50%;
+  z-index: 0;
+  display: block;
+  opacity: 0.3;
+}
+.c-invitation-detail__flower img {
+  width: 100%;
+}
+.c-invitation-detail__box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.c-invitation-detail__tt {
+  font-size: 120px;
+  font-family: "The Nautigal", cursive;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  left: 46.2%;
+  top: 35%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+.c-invitation-detail__tt span {
+  font-size: 86px;
+}
+.c-invitation-detail__info {
+  margin-top: 8%;
+  text-align: center;
+}
+.c-invitation-detail__info-tt {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+.c-invitation-detail__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  line-height: 1.7;
+  gap: 30px;
+}
+.c-invitation-detail__tx1 {
+  font-size: 16px;
+}
+.c-invitation-detail__tx2 {
+  font-size: 23px;
+}
+.c-invitation-detail__tx3 {
+  font-size: 18px;
+}
+.c-invitation-detail__tx5 {
+  font-size: 26px;
+}
+.c-invitation-detail__head {
+  font-size: 26px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.c-invitation-detail__name {
+  margin-bottom: 8%;
+  position: relative;
+  z-index: 1;
+}
+.c-invitation-detail__name > span {
+  font-size: 52px;
+}
+.c-invitation-detail__name > p {
+  font-size: 64px;
+  line-height: 1.1;
+  position: relative;
+}
+.c-invitation-detail__name > p > span {
+  font-size: 14px;
+  display: block;
+}
+.c-invitation-detail__flower2 {
+  position: absolute;
+  right: -8%;
+  bottom: 30%;
+  width: 60%;
+  opacity: 0.3;
+  z-index: -1;
+}
+.c-invitation-detail__time {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 13px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.c-invitation-detail__time span {
+  font-size: 20px;
+}
+.c-invitation-detail__date {
+  width: 400px;
+  margin: 2% auto 8%;
+  max-width: 96%;
+  position: relative;
+  z-index: 1;
+}
+.c-invitation-detail__flower3 {
+  right: 100%;
+  position: absolute;
+  top: 80%;
+  opacity: 0.3;
+  width: 100%;
+}
+.c-invitation-detail__btn {
+  text-align: center;
+  margin: 7% 0;
+}
+.c-invitation-detail__video {
+  width: 400px;
+  height: 300px;
+  margin: 2% auto 0;
+  max-width: 96%;
+  margin-bottom: 8%;
+  border: 2px solid #000;
+  background-color: #000;
+}
+.c-invitation-detail__map {
+  width: 400px;
+  height: 300px;
+  margin: 2% auto 0;
+  max-width: 96%;
+  margin-bottom: 8%;
+}
+.c-invitation-detail__photo {
+  width: 96%;
+  display: block;
+  float: left;
+  margin: 0 2% 8%;
+}
+.c-invitation-detail__photo li {
+  float: left;
+  width: calc(100% / 3);
+  padding: 2px;
+}
+
+@media screen and (max-width: 800px) {
+  .c-invitation-detail__tt {
+    font-size: 15vw;
+  }
+  .c-invitation-detail__tt span {
+    font-size: 10.8vw;
+  }
+}
+@media screen and (max-width: 650px) {
+  .c-invitation-detail__tt {
+    font-size: 15vw;
+  }
+  .c-invitation-detail__tt span {
+    font-size: 10.8vw;
+  }
+  .c-invitation-detail__name > p {
+    font-size: 10vw;
+  }
+  .c-invitation-detail__name > span {
+    font-size: 8vw;
+  }
+  .c-invitation-detail__tx3 {
+    font-size: 4.2vw;
+  }
+  .c-invitation-detail__head {
+    font-size: 5.1vw;
+  }
+}

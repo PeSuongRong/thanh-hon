@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=The+Nautigal:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet preload" as="style" href="common.css" />
+  <link rel="stylesheet preload" as="style" href="style.css" />
+  <title>🌸 Hieu-Yen</title>
+  <style>
+    .petal {
+      position: absolute;
+      z-index: 99;
+      top: -10%;
+      background-color: #ffb7c5;
+      border-radius: 15px 0 15px 0;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateX(100px) rotate(180deg);
+      }
+      100% {
+        top: 110vh;
+        transform: translateX(-50px) rotate(360deg);
+        opacity: 0.2;
+      }
+    }
+
+    .petal:nth-child(1) { left: 10%; width: 15px; height: 15px; animation-duration: 6s; animation-delay: 0s; }
+    .petal:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-duration: 8s; animation-delay: 2s; background-color: #ffc0cb; }
+    .petal:nth-child(3) { left: 35%; width: 12px; height: 12px; animation-duration: 5s; animation-delay: 4s; }
+    .petal:nth-child(4) { left: 50%; width: 18px; height: 18px; animation-duration: 9s; animation-delay: 1s; background-color: #ffa6b9; }
+    .petal:nth-child(5) { left: 65%; width: 14px; height: 14px; animation-duration: 7s; animation-delay: 3s; }
+    .petal:nth-child(6) { left: 80%; width: 22px; height: 22px; animation-duration: 10s; animation-delay: 5s; background-color: #ffc0cb; }
+    .petal:nth-child(7) { left: 90%; width: 16px; height: 16px; animation-duration: 6.5s; animation-delay: 1.5s; }
+    .petal:nth-child(8) { left: 25%; width: 10px; height: 10px; animation-duration: 5s; animation-delay: 3.5s; }
+    .petal:nth-child(9) { left: 75%; width: 15px; height: 15px; animation-duration: 7.5s; animation-delay: 2.5s; }
+  </style>
+</head>
+
+<body>
+  <main class="l-main">
+    <section class="c-invitation u-flex-center js-invitation">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="c-invitation__box">
+        <span class="c-invitation__icon u-flex-center">
+          <svg style="fill:#ffffff" viewBox="0 0 24 24" class="jsx-353cb38c53e4a74a w-7 h-7">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              class="jsx-353cb38c53e4a74a"></path>
+          </svg>
+        </span>
+        <h1 class="c-invitation__tt">
+          Minh Hiếu<br><span>&</span><br>Hải Yến
+        </h1>
+        <p class="u-flex-center">
+          <span class="c-invitation__line1"></span>
+          <span class="c-invitation__ribbon">&nbsp;&nbsp;♀ ♂&nbsp;&nbsp;</span>
+          <span class="c-invitation__line2"></span>
+        </p>
+        <p class="c-invitation__date">CN 18-10-2026<br><span>(Dương lịch)</span></p>
+        <p class="c-invitation__text">Kính Mời</p>
+        <button class="c-invitation__open u-flex-center js-open-invitation">Mở thiệp</button>
+      </div>
+    </section>
+
+    <section class="c-invitation-detail js-invitation-detail">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    <div class="c-invitation-detail__wrap">
+      <figure class="c-invitation-detail__flower">
+        <img src="./img/white-flower.png" alt="">
+      </figure>
+
+      <div class="c-invitation-detail__box">
+        <img src="./img/khung-hoa.webp" alt="">
+        <h2 class="c-invitation-detail__tt">Minh Hiếu<br><span>&</span><br>Hải Yến</h2>
+      </div>
+
+      <div class="c-invitation-detail__info">
+        <h3 class="c-invitation-detail__info-tt u-flex-center u-relative">
+          <span class="c-invitation__line1"></span>&nbsp;&nbsp;THÔNG TIN TIỆC CƯỚI&nbsp;&nbsp;<span class="c-invitation__line2"></span>
+        </h3>
+        <ul class="c-invitation-detail__list u-relative">
+          <li class="c-invitation-detail__item">
+            <p class="c-invitation-detail__tx1">Ông Bà</p>
+            <p class="c-invitation-detail__tx2">Đỗ Văn Minh</p>
+            <p class="c-invitation-detail__tx2">Lê Thị Trường</p>
+            <p class="c-invitation-detail__tx3">Ấp Khởi Hà, Xã Cầu Khởi,<br>Tỉnh Tây Ninh</p> 
+          </li>
+          <li class="c-invitation-detail__item">
+            <p class="c-invitation-detail__tx1">Ông Bà</p>
+            <p class="c-invitation-detail__tx2">Trần Đức Đỗ</p>
+            <p class="c-invitation-detail__tx2">Đào Thị Hường</p>
+            <p class="c-invitation-detail__tx3">Ấp 4, Xã Tân Hưng,<br>Tỉnh Đồng Nai</p> 
+          </li>
+        </ul>
+
+        <h4 class="c-invitation-detail__head u-relative">
+          LỄ THÀNH HÔN
+        </h4>
+
+        <div class="c-invitation-detail__name">
+          <p>ĐỖ MINH HIẾU<span>TRƯỞNG NAM</span></p>
+          <span>&</span>
+          <p>TRẦN HẢI YẾN<span>TRƯỞNG NỮ</span></p>
+          <figure class="c-invitation-detail__flower2">
+            <img src="./img/white-flower.png" alt="">
+          </figure>
+        </div>
+
+        <p class="c-invitation-detail__tx3">ĐƯỢC CỬ HÀNH TẠI NHÀ HÀNG TIỆC  CƯỚI<br>HOA CAU VƯỜN TRẦU</p>
+        <p class="c-invitation-detail__tx1">(Tổ 5, Khu phố 3B, Chơn Thành, Đồng Nai)</p>
+
+        <div class="c-invitation-detail__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.963078208244!2d106.613157!3d11.482588900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174ac11dc2fc5c7%3A0x8079ade48db762c2!2zTmjDoCBow6BuZyB0aeG7h2MgY8aw4bubaSBIT0EgQ0FVIFbGr-G7nE4gVFLhuqZV!5e0!3m2!1svi!2s!4v1788790228376!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+        <ul class="c-invitation-detail__time">
+          <li>
+            ĐÓN KHÁCH<br><span>10:30</span>
+          </li>
+          <li>
+            KHAI TIỆC<br><span>11:30</span>
+          </li>
+        </ul>
+
+        <p class="c-invitation-detail__tx5">CN - 18-10-2026</p>
+        <p class="c-invitation-detail__tx1">(TỨC NGÀY 9 THÁNG 9 NĂM BÍNH NGỌ)</p>
+
+        <figure class="c-invitation-detail__date">
+          <img src="./img/lich-thanh-hon.png" alt="">
+          <img class="c-invitation-detail__flower3" src="./img/white-flower.png" alt="">
+        </figure>
+
+        <div class="c-invitation-detail__info-tt u-flex-center">
+          <span class="c-invitation__line1"></span>&nbsp;&nbsp;KỈ NIỆM&nbsp;&nbsp;<span class="c-invitation__line1"></span>
+        </div>
+
+        <div class="c-invitation-detail__video">
+          <video width="100%" height="100%" controls>
+            <source src="./img/cuoi.MOV" type="video/mp4">
+          </video>
+        </div>
+
+        <ul class="c-invitation-detail__photo">
+          <li class="c-invitation-detail__img1">
+            <img src="./img/hinhcuoi/2026-1.jpg" alt="">
+          </li>
+          <li class="c-invitation-detail__img2">
+            <img src="./img/hinhcuoi/2026-3.jpg" alt="">
+          </li>
+          <li class="c-invitation-detail__img3">
+            <img src="./img/hinhcuoi/2026-5.jpg" alt="">
+          </li>
+          <li class="c-invitation-detail__img3">
+            <img src="./img/hinhcuoi/2026-2.jpg" alt="">
+          </li>
+          <li class="c-invitation-detail__img1">
+            <img src="./img/hinhcuoi/2026-4.jpg" alt="">
+          </li>
+          <li class="c-invitation-detail__img2">
+            <img src="./img/hinhcuoi/2026-6.jpg" alt="">
+          </li>
+        </ul>
+
+        <p class="c-invitation-detail__tx3 c-invitation-detail__tx3--cus">Hôm nay ngày lành tháng tốt,<br>chúng con / chúng em chính thức về chung một nhà. Sự hiện diện của các bác, các cô, các chú cùng anh chị em, bạn bè là niềm vinh hạnh của gia đình chúng con/ chúng em!</p>
+
+        <div class="c-invitation-detail__btn">
+          <button class="c-invitation__open u-flex-center js-close-invitation">Đóng thiệp</button>
+        </div>
+      </div>
+      
+    </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="./common.js"></script>
+</body>
+
+</html>
