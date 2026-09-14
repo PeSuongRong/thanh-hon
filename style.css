@@ -223,6 +223,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 5%;
+  margin-top: 8%;
 }
 .c-invitation-detail__list {
   display: -webkit-box;
@@ -294,7 +295,7 @@ body {
 }
 .c-invitation-detail__date {
   width: 400px;
-  margin: 2% auto 8%;
+  margin: 2% auto 3%;
   max-width: 96%;
   position: relative;
   z-index: 1;
