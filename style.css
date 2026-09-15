@@ -245,6 +245,9 @@ body {
 .c-invitation-detail__tx3, .c-invitation-detail__tx6 {
   font-size: 18px;
 }
+.c-invitation-detail__tx6 {
+  margin-top: 2%;
+}
 .c-invitation-detail__tx5 {
   font-size: 26px;
 }
